@@ -11,7 +11,7 @@ export class App extends React.Component {
     bad: 0,
   };
 
-    HandleFeedback = (e) => {
+    handleFeedback = (e) => {
         this.setState((prevState) => {
             return {
               [e]: prevState[e] + 1
@@ -30,7 +30,7 @@ export class App extends React.Component {
     return (
       <>
         <Section title = "Pease leave feedback">
-          <FeedbackOptions onLeaveFeedback={this.HandleFeedback} options={Object.keys(this.state)} />
+          <FeedbackOptions onLeaveFeedback={this.handleFeedback} options={Object.keys(this.state)} />
         </Section>
 
         {this.countTotalFeedback() > 0 ? (
